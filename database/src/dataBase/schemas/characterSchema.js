@@ -12,7 +12,7 @@ const characterSchema = new Schema({
   gender: String,
   homeworld: { type: String, ref: "Planet" }, //referencia al planeta del que viene
   films: [{ type: String, ref: "Film" }], //array de id de peliculas
-});a
+});
 // methodos para obtener datos//////
 characterSchema.statics.list = async function () {
   return await this.find()
